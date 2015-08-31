@@ -1,7 +1,7 @@
 //
 //  BaseViewController.m
 //  HXYLibrary-iOS
-//
+//  Parent View Controller
 //  Created by 胡晓阳 on 15/8/31.
 //  Copyright (c) 2015年 HXY. All rights reserved.
 //
@@ -13,6 +13,15 @@
 @end
 
 @implementation BaseViewController
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
