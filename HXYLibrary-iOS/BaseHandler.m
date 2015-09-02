@@ -10,4 +10,9 @@
 
 @implementation BaseHandler
 
++(NSString *)requestUrlWithDomain:(NSString *)domainName andPath:(NSString *)path
+{
+    return [domainName stringByAppendingString:path];
+}
+
 @end
