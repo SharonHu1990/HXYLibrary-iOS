@@ -43,6 +43,8 @@ typedef void(^HTTPRequestFailureBlock)(NSError *error);
 
 @interface HXYHTTPClient : NSObject
 
+@property (nonatomic, assign) AFNetworkReachabilityStatus networkStatus;
+
 +(HXYHTTPClient *)defaultClient;
 
 /**
