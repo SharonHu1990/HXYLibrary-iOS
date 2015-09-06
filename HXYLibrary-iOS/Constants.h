@@ -9,5 +9,9 @@
 #ifndef HXYLibrary_iOS_Constants_h
 #define HXYLibrary_iOS_Constants_h
 
+//屏幕宽高
+#define DeviceWidth [UIScreen mainScreen].bounds.size.width
+#define DeviceHeight [UIScreen mainScreen].bounds.size.height
+
 
 #endif
