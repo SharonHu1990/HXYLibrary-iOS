@@ -1,2 +1,6 @@
 pod 'AFNetworking', '~> 2.5.3'
 pod 'Reachability', '~> 3.2'
+pod 'SDWebImage', '~> 3.7.2'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'Mantle', '~> 2.0'
+pod 'MJRefresh'

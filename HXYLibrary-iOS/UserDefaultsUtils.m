@@ -38,6 +38,6 @@
 +(void)print{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *dic = [userDefaults dictionaryRepresentation];
-//    DLog(@"%@",dic);
+    DLog(@"%@",dic);
 }
 @end

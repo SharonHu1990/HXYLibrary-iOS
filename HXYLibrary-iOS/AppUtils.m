@@ -9,5 +9,4 @@
 #import "AppUtils.h"
 
 @implementation AppUtils
-
 @end
