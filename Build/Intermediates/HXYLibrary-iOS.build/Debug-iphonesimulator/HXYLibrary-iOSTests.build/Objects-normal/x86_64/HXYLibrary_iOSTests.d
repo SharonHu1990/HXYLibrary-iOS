@@ -1,5 +1,7 @@
 dependencies: \
   /Users/huxiaoyang/Desktop/MyWorkSpace/HXYLibrary-iOS/HXYLibrary-iOSTests/HXYLibrary_iOSTests.m \
+  /Users/huxiaoyang/Desktop/MyWorkSpace/HXYLibrary-iOS/HXYLibrary-iOS/HXYLibrary-iOS-Prefix.pch \
+  /Users/huxiaoyang/Desktop/MyWorkSpace/HXYLibrary-iOS/HXYLibrary-iOS/Constants.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \
