@@ -23,6 +23,8 @@
 		0A3E8AB61B93E7D0003D4A8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3E8AB51B93E7D0003D4A8C /* Images.xcassets */; };
 		0A3E8AB91B93E7D0003D4A8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3E8AB71B93E7D0003D4A8C /* LaunchScreen.xib */; };
 		0A3E8AC51B93E7D0003D4A8C /* HXYLibrary_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E8AC41B93E7D0003D4A8C /* HXYLibrary_iOSTests.m */; };
+		0AA537C71B9EE0E400B5299F /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA537C51B9EE0E400B5299F /* 37x-Checkmark.png */; };
+		0AA537C81B9EE0E400B5299F /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA537C61B9EE0E400B5299F /* 37x-Checkmark@2x.png */; };
 		42582936EFBB42062182ECFA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFADD1D37AAD89EDECFF2191 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		0A3E8ABE1B93E7D0003D4A8C /* HXYLibrary-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HXYLibrary-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3E8AC31B93E7D0003D4A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3E8AC41B93E7D0003D4A8C /* HXYLibrary_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXYLibrary_iOSTests.m; sourceTree = "<group>"; };
+		0AA537C51B9EE0E400B5299F /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		0AA537C61B9EE0E400B5299F /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		0AC63F781B9D5F800095A54E /* HXYLibrary-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HXYLibrary-iOS-Prefix.pch"; sourceTree = "<group>"; };
 		A08ACADEDD2920E57F375980 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CFADD1D37AAD89EDECFF2191 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,16 +127,10 @@
 		0A22485B1B93E8DA0004BE6E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				0A22485C1B93E8E00004BE6E /* Image */,
+				0AA537C41B9EE0E400B5299F /* Image */,
+				0AA537C31B9EE0AC00B5299F /* UI */,
 			);
 			name = Resource;
-			sourceTree = "<group>";
-		};
-		0A22485C1B93E8E00004BE6E /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Image;
 			sourceTree = "<group>";
 		};
 		0A22485D1B93E9090004BE6E /* Utils */ = {
@@ -251,9 +249,7 @@
 				0A2248641B93E9870004BE6E /* Category */,
 				0A22485D1B93E9090004BE6E /* Utils */,
 				0A2248591B93E88D0004BE6E /* View */,
-				0A3E8AB21B93E7D0003D4A8C /* Main.storyboard */,
 				0A3E8AB51B93E7D0003D4A8C /* Images.xcassets */,
-				0A3E8AB71B93E7D0003D4A8C /* LaunchScreen.xib */,
 				0A3E8AAC1B93E7D0003D4A8C /* HXYLibrary_iOS.xcdatamodeld */,
 				0A3E8AA51B93E7D0003D4A8C /* Supporting Files */,
 			);
@@ -285,6 +281,24 @@
 				0A3E8AC31B93E7D0003D4A8C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AA537C31B9EE0AC00B5299F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0A3E8AB21B93E7D0003D4A8C /* Main.storyboard */,
+				0A3E8AB71B93E7D0003D4A8C /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0AA537C41B9EE0E400B5299F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				0AA537C51B9EE0E400B5299F /* 37x-Checkmark.png */,
+				0AA537C61B9EE0E400B5299F /* 37x-Checkmark@2x.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		12503BD74F796714F10810EB /* Frameworks */ = {
@@ -387,8 +401,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA537C71B9EE0E400B5299F /* 37x-Checkmark.png in Resources */,
 				0A3E8AB41B93E7D0003D4A8C /* Main.storyboard in Resources */,
 				0A3E8AB91B93E7D0003D4A8C /* LaunchScreen.xib in Resources */,
+				0AA537C81B9EE0E400B5299F /* 37x-Checkmark@2x.png in Resources */,
 				0A3E8AB61B93E7D0003D4A8C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
