@@ -23,6 +23,9 @@
 		0A3E8AB61B93E7D0003D4A8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3E8AB51B93E7D0003D4A8C /* Images.xcassets */; };
 		0A3E8AB91B93E7D0003D4A8C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3E8AB71B93E7D0003D4A8C /* LaunchScreen.xib */; };
 		0A3E8AC51B93E7D0003D4A8C /* HXYLibrary_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3E8AC41B93E7D0003D4A8C /* HXYLibrary_iOSTests.m */; };
+		0A66B7411BA000A1001D034C /* HXYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66B7401BA000A1001D034C /* HXYTableViewController.m */; };
+		0A66B7451BA02106001D034C /* HXYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66B7431BA02106001D034C /* HXYTableViewCell.m */; };
+		0A66B7461BA02106001D034C /* HXYTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A66B7441BA02106001D034C /* HXYTableViewCell.xib */; };
 		0AA537C71B9EE0E400B5299F /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA537C51B9EE0E400B5299F /* 37x-Checkmark.png */; };
 		0AA537C81B9EE0E400B5299F /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA537C61B9EE0E400B5299F /* 37x-Checkmark@2x.png */; };
 		42582936EFBB42062182ECFA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFADD1D37AAD89EDECFF2191 /* libPods.a */; };
@@ -71,6 +74,11 @@
 		0A3E8ABE1B93E7D0003D4A8C /* HXYLibrary-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HXYLibrary-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3E8AC31B93E7D0003D4A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3E8AC41B93E7D0003D4A8C /* HXYLibrary_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXYLibrary_iOSTests.m; sourceTree = "<group>"; };
+		0A66B73F1BA000A1001D034C /* HXYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXYTableViewController.h; sourceTree = "<group>"; };
+		0A66B7401BA000A1001D034C /* HXYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXYTableViewController.m; sourceTree = "<group>"; };
+		0A66B7421BA02106001D034C /* HXYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXYTableViewCell.h; sourceTree = "<group>"; };
+		0A66B7431BA02106001D034C /* HXYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXYTableViewCell.m; sourceTree = "<group>"; };
+		0A66B7441BA02106001D034C /* HXYTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXYTableViewCell.xib; sourceTree = "<group>"; };
 		0AA537C51B9EE0E400B5299F /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		0AA537C61B9EE0E400B5299F /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		0AC63F781B9D5F800095A54E /* HXYLibrary-iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HXYLibrary-iOS-Prefix.pch"; sourceTree = "<group>"; };
@@ -111,6 +119,9 @@
 		0A2248591B93E88D0004BE6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0A66B7421BA02106001D034C /* HXYTableViewCell.h */,
+				0A66B7431BA02106001D034C /* HXYTableViewCell.m */,
+				0A66B7441BA02106001D034C /* HXYTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -120,6 +131,8 @@
 			children = (
 				0A3E8AAF1B93E7D0003D4A8C /* ViewController.h */,
 				0A3E8AB01B93E7D0003D4A8C /* ViewController.m */,
+				0A66B73F1BA000A1001D034C /* HXYTableViewController.h */,
+				0A66B7401BA000A1001D034C /* HXYTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -402,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA537C71B9EE0E400B5299F /* 37x-Checkmark.png in Resources */,
+				0A66B7461BA02106001D034C /* HXYTableViewCell.xib in Resources */,
 				0A3E8AB41B93E7D0003D4A8C /* Main.storyboard in Resources */,
 				0A3E8AB91B93E7D0003D4A8C /* LaunchScreen.xib in Resources */,
 				0AA537C81B9EE0E400B5299F /* 37x-Checkmark@2x.png in Resources */,
@@ -457,11 +471,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2248731B93EABB0004BE6E /* BaseTableViewProtocol.m in Sources */,
+				0A66B7411BA000A1001D034C /* HXYTableViewController.m in Sources */,
 				0A3E8AAB1B93E7D0003D4A8C /* AppDelegate.m in Sources */,
 				0A22487E1B9421AA0004BE6E /* HXYHTTPClient.m in Sources */,
 				0A3E8AAE1B93E7D0003D4A8C /* HXYLibrary_iOS.xcdatamodeld in Sources */,
 				0A2248631B93E96E0004BE6E /* UserDefaultsUtils.m in Sources */,
 				0A2248601B93E95A0004BE6E /* AppUtils.m in Sources */,
+				0A66B7451BA02106001D034C /* HXYTableViewCell.m in Sources */,
 				0A3E8AB11B93E7D0003D4A8C /* ViewController.m in Sources */,
 				0A22486A1B93EA510004BE6E /* BaseViewController.m in Sources */,
 				0A2248761B93EAE90004BE6E /* BaseDatabase.m in Sources */,

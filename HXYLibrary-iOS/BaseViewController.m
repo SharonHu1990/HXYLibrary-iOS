@@ -27,13 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [AppUtils showLoadingHUDOnView:self.view withLabelText:@"Loading" executingBlock:^{
-        DLog(@"加载中");
-    }];
-    
-    [AppUtils showCompletedHUDOnView:self.view withLableText:@"Completed" completedBlock:^{
-        DLog(@"结束加载");
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

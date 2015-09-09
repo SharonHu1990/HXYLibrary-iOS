@@ -20,25 +20,34 @@
     [systemAlert show];
 }
 
-+(void)showCompletedHUDOnView:(UIView *)view withLableText:(NSString *)labelText completedBlock:(HUDCompletedBlock)completedBlock
++(void)showCompletedHUDOnView:(UIView *)view withLableText:(NSString *)labelText completedBlock:(HUDCompletedBlock)completedBlock showImage:(BOOL)showImage
 {
-
     MBProgressHUD *hud = [MBProgressHUD HUDForView:view];
-    if (hud) {
-        hud.labelText = labelText;
-        __block UIImageView *imageView;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIImage *image = [UIImage imageNamed:@"37x-Checkmark.png"];
-            imageView = [[UIImageView alloc] initWithImage:image];
-        });
+    
+    if (!hud) {
+        hud = [[MBProgressHUD alloc] initWithView:view];
+        [view addSubview:hud];
+        [hud show:YES];
+    }
+    
+    if (showImage) {
+        UIImage *image = [UIImage imageNamed:@"37x-Checkmark.png"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         hud.customView = imageView;
         hud.mode = MBProgressHUDModeCustomView;
-        
-
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [AppUtils dismissHUD:hud];
-        });
     }
+    else{
+         hud.mode = MBProgressHUDModeText;
+    }
+    hud.labelText = labelText;
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismissHUD:hud];
+        if (completedBlock) {
+            completedBlock();
+        }
+    });
 }
 
 +(void)dismissHUD:(MBProgressHUD *)hud
@@ -47,14 +56,13 @@
     hud = nil;
 }
 
-+(void)showLoadingHUDOnView:(UIView *)view withLabelText:(NSString *)labelText executingBlock:(HUDExecutingBlock)executingBlock
++(void)showLoadingHUDOnView:(UIView *)view withLabelText:(NSString *)labelText
 {
     
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     [view addSubview:hud];
     hud.labelText = labelText;
     [hud show:YES];
-
 }
 
 +(BOOL)isLegalTelephone:(NSString *)phoneNumber
@@ -89,6 +97,21 @@
     NSString *regex = @"(^[a-zA-Z][a-zA-Z0-9_]{5,13}$)";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject:username];
+}
+
++(BOOL)isLegalEmail:(NSString *)email
+{
+    NSString *emailRegEx =
+    @"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
+    @"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
+    @"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
+    @"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
+    @"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
+    @"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
+    @"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+    
+    NSPredicate *regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
+    return [regExPredicate evaluateWithObject:[email lowercaseString]];
 }
 
 @end
