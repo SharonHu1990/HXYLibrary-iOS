@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Base64nl (1.2)
   - Mantle (2.0):
     - Mantle/extobjc (= 2.0)
   - Mantle/extobjc (2.0)
@@ -32,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
+  - Base64nl (~> 1.2)
   - Mantle (~> 2.0)
   - MBProgressHUD (~> 0.9.1)
   - MJRefresh
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Base64nl: a497bdcd1c01ea793d36b399016195a8713c0e95
   Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7

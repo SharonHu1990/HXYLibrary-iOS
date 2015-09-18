@@ -50,11 +50,11 @@ static NSString *CellID = @"CellID";
 //    [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
     self.items = [NSMutableArray arrayWithObjects:STR1,STR2, nil];
-//    self.baseTableViewProtocol = [[BaseTableViewProtocol alloc] initWithItems:self.items cellIdentifier:CellID configureCellBlock:^(HXYTableViewCell *cell, id entity, NSIndexPath *indexPath) {
-//        [cell.contentLB setText:entity];
-//    }];
-//    
-//    self.tableView.dataSource = self.baseTableViewProtocol;
+    self.baseTableViewProtocol = [[BaseTableViewProtocol alloc] initWithItems:self.items cellIdentifier:CellID configureCellBlock:^(HXYTableViewCell *cell, id entity, NSIndexPath *indexPath) {
+        [cell.contentLB setText:entity];
+    }];
+
+    self.tableView.dataSource = self.baseTableViewProtocol;
     [self.tableView registerNib:[HXYTableViewCell nib] forCellReuseIdentifier:CellID];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.f;
@@ -94,35 +94,35 @@ static NSString *CellID = @"CellID";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return self.items.count;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    // Configure the cell...
-//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
-//    [cell.textLabel setText:self.items[indexPath.row]];
+//#pragma mark - Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//#warning Incomplete method implementation.
+//    // Return the number of rows in the section.
+//    return self.items.count;
+//}
+//
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    // Configure the cell...
+////    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+////    [cell.textLabel setText:self.items[indexPath.row]];
+////    
+////    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellID];
+////    return cell;
 //    
-//    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellID];
-//    return cell;
-    
-    
-    HXYTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID forIndexPath:indexPath];
-    [cell.contentLB setText:self.items[indexPath.row]];
-    return cell;
-}
+//    
+////    HXYTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID forIndexPath:indexPath];
+////    [cell.contentLB setText:self.items[indexPath.row]];
+////    return cell;
+//}
 
 
 /*

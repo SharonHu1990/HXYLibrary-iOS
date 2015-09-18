@@ -78,4 +78,7 @@ typedef void(^HUDCompletedBlock)();
 
 //验证邮箱的合法性
 + (BOOL)isLegalEmail:(NSString *)email;
+
+
+
 @end
