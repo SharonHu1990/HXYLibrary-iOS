@@ -27,4 +27,30 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define kColorWithRGBA(r, g, b, a) [UIColor colorWithRed:(r) / 255.f green:(g) / 255.f blue:(b) / 255.f alpha:(a)]
 
 
+
+#ifdef DEBUG
+#define DLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DLog( s, ... )
+#endif
+
+
+/****************** TODO宏 ********************/
+// 转成字符串
+#define STRINGIFY(S) #S
+// 需要解两次才解开的宏
+#define DEFER_STRINGIFY(S) STRINGIFY(S)
+
+#define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
+
+// 为warning增加更多信息
+#define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n" DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
+
+// 使宏前面可以加@
+#define KEYWORDIFY try {} @catch (...) {}
+
+// 最终使用的宏
+#define TODO(MSG) KEYWORDIFY PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
+
 #endif
